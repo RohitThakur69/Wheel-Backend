@@ -41,7 +41,7 @@ def get_title():
         
         # Find the title tag
         if soup.title:
-            return jsonify({'title': soup.title.string.split("(")[0].strip()}[:30])
+            return jsonify({'title': soup.title.string.split("(")[0].strip()[:30]})
         else:
             return jsonify({'title': 'No Title Found'})
             
@@ -53,3 +53,4 @@ def get_title():
 if __name__ == '__main__':
 
     app.run()
+
